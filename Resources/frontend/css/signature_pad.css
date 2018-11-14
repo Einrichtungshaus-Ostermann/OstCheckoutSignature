@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+.signature-pad {
+  position: relative !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  font-size: 10px !important;
+  width: 100% !important;
+  height: 100% !important;
+/*  max-width: 700px !important;
+  max-height: 460px !important;*/
+  border: 1px solid #e8e8e8 !important;
+  background-color: #fff !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset !important;
+  border-radius: 4px !important;
+  padding: 16px !important;
+}
+
+.signature-pad::before,
+.signature-pad::after {
+  position: absolute !important;
+  z-index: -1 !important;
+  content: "" !important;
+  width: 40% !important;
+  height: 10px !important;
+  bottom: 10px !important;
+  background: transparent !important;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+.signature-pad::before {
+  left: 20px !important;
+  -webkit-transform: skew(-3deg) rotate(-3deg) !important;
+          transform: skew(-3deg) rotate(-3deg) !important;
+}
+
+.signature-pad::after {
+  right: 20px !important;
+  -webkit-transform: skew(3deg) rotate(3deg) !important;
+          transform: skew(3deg) rotate(3deg) !important;
+}
+
+.signature-pad--body {
+  position: relative !important;
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 !important;
+          flex: 1 !important;
+  border: 1px solid #f4f4f4 !important;
+}
+
+.canvas--element{
+  min-height: 300px !important;
+/*  height: 300px !important;*/
+  height: 100% !important;
+}
+
+.signature-pad--body
+canvas {
+/*  position: absolute !important;*/
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.02) inset !important;
+}
+
+.signature-pad--footer {
+  text-align: center !important;
+  font-size: 1.2em !important;
+  margin-top: 8px !important;
+}
+
+.signature-pad--actions {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  margin-top: 8px !important;
+}
+
+@media (max-width: 940px) {
+  #github img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+}
+
+#CheckoutSignaturePlugin {
+  height: 100%;
+  width: 98.5%;
+  float: left;
+  margin: 5px !important;
+  display: block;
+}
+
+#CheckoutSignaturePluginSigContainer {
+  border: 1px solid #e9e9ff;
+  overflow: visible;
+  position: relative;
+}
+
+#CheckoutSignaturePluginSigX {
+  position: absolute;
+  color: white;
+  top: -5px;
+  right: -10px;
+}
