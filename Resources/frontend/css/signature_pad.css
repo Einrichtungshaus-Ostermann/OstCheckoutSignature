@@ -4,6 +4,10 @@
   box-sizing: border-box !important;
 }
 
+.container--ajax-cart.off-canvas .icon--loading-indicator {
+    box-sizing: content-box !important;
+}
+
 .signature-pad {
   position: relative !important;
   display: -webkit-box !important;
