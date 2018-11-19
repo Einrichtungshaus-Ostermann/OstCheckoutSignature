@@ -196,7 +196,7 @@ $( document ).ready(function() {
 
         testForSig();
 
-        window.onload = function () {
+        
 
             var modalSizing = 0;
 
@@ -242,7 +242,7 @@ $( document ).ready(function() {
 
             $.subscribe('plugin/swModalbox/onClose', saveBeforeClose);
 
-        };
+
 
     }
 
