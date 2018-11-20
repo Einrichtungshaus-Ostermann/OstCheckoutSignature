@@ -1,6 +1,13 @@
 
-/* helper script to change order and reposition elements on the checkout page */
-/* This file will affect all plugin displays on the checkout page identified via id^="plugin_..." */
+/**
+ * Einrichtungshaus Ostermann GmbH & Co. KG - Checkout Signature
+ *
+ * @package   OstCheckoutSignature
+ *
+ * @author    Eike Brandt-Warneke <e.brandt-warneke@aquatuning.de>
+ * @copyright 2018 Einrichtungshaus Ostermann GmbH & Co. KG
+ * @license   proprietary
+ */
 
 $( document ).ready(function() {
 

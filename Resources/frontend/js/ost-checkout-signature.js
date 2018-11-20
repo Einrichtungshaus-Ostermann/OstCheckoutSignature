@@ -1,12 +1,16 @@
 
-
-
+/**
+ * Einrichtungshaus Ostermann GmbH & Co. KG - Checkout Signature
+ *
+ * @package   OstCheckoutSignature
+ *
+ * @author    Eike Brandt-Warneke <e.brandt-warneke@aquatuning.de>
+ * @copyright 2018 Einrichtungshaus Ostermann GmbH & Co. KG
+ * @license   proprietary
+ */
 
 // Handler when the DOM is fully loaded
 $( document ).ready(function() {
-
-
-
 
     // are we on plugin page?
     if(document.getElementById("signature-pad")){
@@ -196,7 +200,7 @@ $( document ).ready(function() {
 
         testForSig();
 
-        
+
 
             var modalSizing = 0;
 
@@ -241,9 +245,6 @@ $( document ).ready(function() {
             }
 
             $.subscribe('plugin/swModalbox/onClose', saveBeforeClose);
-
-
-
     }
 
 });

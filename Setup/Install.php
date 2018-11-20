@@ -26,16 +26,12 @@ class Install
      */
     protected $plugin;
 
-
-
     /**
      * ...
      *
      * @var InstallContext
      */
     protected $context;
-
-
 
     /**
      * ...
@@ -44,8 +40,6 @@ class Install
      */
     protected $modelManager;
 
-
-
     /**
      * ...
      *
@@ -53,28 +47,24 @@ class Install
      */
     protected $crudService;
 
-
     /**
      * ...
      *
      * @var array
      */
-
-    protected $attributes = array(
-        's_order_attributes' => array(
-            array(
-                'column' => "ost_checkout_signature",
-                'type' => "text",
-                'data' => array(
+    protected $attributes = [
+        's_order_attributes' => [
+            [
+                'column' => 'ost_checkout_signature',
+                'type'   => 'text',
+                'data'   => [
                     'translatable'     => false,
                     'displayInBackend' => false,
                     'custom'           => false
-                )
-            )
-        )
-    );
-
-
+                ]
+            ]
+        ]
+    ];
 
     /**
      * ...
@@ -93,8 +83,6 @@ class Install
         $this->crudService = $crudService;
     }
 
-
-
     /**
      * ...
      *
@@ -103,17 +91,18 @@ class Install
     public function install()
     {
         // ...
-        foreach ( $this->attributes as $table => $attributes )
-            foreach ( $attributes as $attribute )
+        foreach ($this->attributes as $table => $attributes) {
+            foreach ($attributes as $attribute) {
                 $this->crudService->update(
                     $table,
                     $attribute['column'],
                     $attribute['type'],
                     $attribute['data']
                 );
+            }
+        }
 
         // ...
-        $this->modelManager->generateAttributeModels( array_keys( $this->attributes ) );
+        $this->modelManager->generateAttributeModels(array_keys($this->attributes));
     }
-
 }

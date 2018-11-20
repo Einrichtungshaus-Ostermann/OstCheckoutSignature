@@ -1,14 +1,22 @@
 <?php declare(strict_types=1);
 
-
+/**
+ * Einrichtungshaus Ostermann GmbH & Co. KG - Checkout Signature
+ *
+ * @package   OstCheckoutSignature
+ *
+ * @author    Eike Brandt-Warneke <e.brandt-warneke@aquatuning.de>
+ * @copyright 2018 Einrichtungshaus Ostermann GmbH & Co. KG
+ * @license   proprietary
+ */
 
 namespace OstCheckoutSignature\Listeners\Controllers\Frontend;
 
 use Enlight_Controller_Action as Controller;
 use Enlight_Event_EventArgs as EventArgs;
 use Enlight_Hook_HookArgs as HookArgs;
-use Shopware\Models\Order\Order;
 use Shopware\Components\Model\ModelManager;
+use Shopware\Models\Order\Order;
 
 class Checkout
 {
@@ -19,16 +27,12 @@ class Checkout
      */
     protected $viewDir;
 
-
-
     /**
      * ...
      *
      * @var array
      */
     protected $configuration;
-
-
 
     /**
      * ...
@@ -43,8 +47,6 @@ class Checkout
         $this->configuration = $configuration;
     }
 
-
-
     /**
      * ...
      *
@@ -58,26 +60,20 @@ class Checkout
         $view = $controller->View();
         $controllerName = $request->getControllerName();
 
-
         // add template dir
         $view->addTemplateDir($this->viewDir);
     }
-
-
-
-
-
 
     /**
      * ...
      *
      * @param HookArgs $arguments
+     *
+     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws \Exception
      */
     public function afterSaveOrder(HookArgs $arguments)
     {
-
-        
-
         /** @var \Shopware_Controllers_Frontend_Checkout $controller */
         $controller = $arguments->getSubject();
 
@@ -100,7 +96,7 @@ class Checkout
             return;
         }
 
-        if(!$controller->Request()->isPost()){
+        if (!$controller->Request()->isPost()) {
             return;
         }
 
@@ -109,10 +105,6 @@ class Checkout
 
         $orderDetails->setOstCheckoutSignature($signatureData);
 
-
-
         $db->flush();
-
-
     }
 }

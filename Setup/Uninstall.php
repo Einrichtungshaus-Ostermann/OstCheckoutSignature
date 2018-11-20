@@ -26,16 +26,12 @@ class Uninstall
      */
     protected $plugin;
 
-
-
     /**
      * ...
      *
      * @var UninstallContext
      */
     protected $context;
-
-
 
     /**
      * ...
@@ -44,8 +40,6 @@ class Uninstall
      */
     protected $modelManager;
 
-
-
     /**
      * ...
      *
@@ -53,31 +47,24 @@ class Uninstall
      */
     protected $crudService;
 
-
-
-
     /**
      * ...
      *
      * @var array
      */
-
-    protected $attributes = array(
-        's_order_attributes' => array(
-            array(
-                'column' => "ost_checkout_signature",
-                'type' => "text",
-                'data' => array(
+    protected $attributes = [
+        's_order_attributes' => [
+            [
+                'column' => 'ost_checkout_signature',
+                'type'   => 'text',
+                'data'   => [
                     'translatable'     => false,
                     'displayInBackend' => false,
                     'custom'           => false
-                )
-            )
-        )
-    );
-
-
-
+                ]
+            ]
+        ]
+    ];
 
     /**
      * ...
@@ -96,8 +83,6 @@ class Uninstall
         $this->crudService = $crudService;
     }
 
-
-
     /**
      * ...
      *
@@ -106,14 +91,16 @@ class Uninstall
     public function uninstall()
     {
         // ...
-        foreach ( $this->attributes as $table => $attributes )
-            foreach ( $attributes as $attribute )
+        foreach ($this->attributes as $table => $attributes) {
+            foreach ($attributes as $attribute) {
                 $this->crudService->delete(
                     $table,
                     $attribute['column']
                 );
+            }
+        }
 
         // ...
-        $this->modelManager->generateAttributeModels( array_keys( $this->attributes ) );
+        $this->modelManager->generateAttributeModels(array_keys($this->attributes));
     }
 }
