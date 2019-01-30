@@ -72,6 +72,8 @@
         </div>
     </div>
 
+    <div style="clear: both;"></div>
+
     {* add parent *}
     {$smarty.block.parent}
 

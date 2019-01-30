@@ -16,6 +16,7 @@
  *
  * 1.0.3
  * - added unique css container class
+ * - added additional div for a possible float
  *
  * @package   OstCheckoutSignature
  *
