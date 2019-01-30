@@ -33,7 +33,7 @@
 {* add table actions *}
 {block name='frontend_checkout_confirm_confirm_table_actions'}
 
-    <div class="panel has--border" id="plugin_CheckoutSignature_holder">
+    <div class="panel has--border ost-checkout-signature--container" id="plugin_CheckoutSignature_holder">
         <div class="panel--body is--rounded">
             <div class="table--header block-group">
                 <div class="panel--th column--product block">

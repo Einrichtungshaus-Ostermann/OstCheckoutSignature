@@ -14,6 +14,9 @@
  * 1.0.2
  * - fixed margin of outer html container
  *
+ * 1.0.3
+ * - added unique css container class
+ *
  * @package   OstCheckoutSignature
  *
  * @author    Eike Brandt-Warneke <e.brandt-warneke@aquatuning.de>
