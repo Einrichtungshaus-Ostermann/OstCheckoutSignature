@@ -43,7 +43,7 @@
             <div class="table--tr block-group row--product is--last-row">
                 <div class="" style="width: 100% !important;">
                     <div id="Textholder">
-                        <div id="client_signature" style="margin: 15px;">
+                        <div id="client_signature" style="margin: 0;">
                             <span id="signButton" class="btn">Unterschrift erfassen</span>
                         </div>
                     </div>
@@ -60,7 +60,6 @@
                 <canvas class="canvas--element" style="height: 100% !important;"></canvas>
             </div>
             <div class="signature-pad--footer">
-
                 <div class="signature-pad--actions">
                     <div>
                         <button type="button" class="btn button clear" data-action="clear" onclick="document.getElementById('confirmButton').style.display='none';">Löschen</button>

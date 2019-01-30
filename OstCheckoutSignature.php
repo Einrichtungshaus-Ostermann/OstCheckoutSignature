@@ -11,6 +11,9 @@
  * 1.0.1
  * - fixed plugin name
  *
+ * 1.0.2
+ * - fixed margin of outer html container
+ *
  * @package   OstCheckoutSignature
  *
  * @author    Eike Brandt-Warneke <e.brandt-warneke@aquatuning.de>
