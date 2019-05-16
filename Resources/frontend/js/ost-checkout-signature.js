@@ -161,7 +161,8 @@ $( document ).ready(function() {
                         var cnt = '<div id="modalContentHolder" style="height: 98% !important;"></div>';
 
                         modalElement = $.modal.open(cnt, {
-                            title: ostCheckoutSignatureSnippets.modalTitle
+                            title: ostCheckoutSignatureSnippets.modalTitle,
+                            additionalClass: "no--header",
                         });
 
                         var element = $(cSP);
@@ -216,7 +217,8 @@ $( document ).ready(function() {
             $('#signButton').click(function(){
 
                 modalElement = $.modal.open(cnt, {
-                    title: ostCheckoutSignatureSnippets.modalTitle
+                    title: ostCheckoutSignatureSnippets.modalTitle,
+                    additionalClass: "no--header",
                 });
 
                 var element = $(cSP);

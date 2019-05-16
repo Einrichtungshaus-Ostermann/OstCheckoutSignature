@@ -18,6 +18,9 @@
  * - added unique css container class
  * - added additional div for a possible float
  *
+ * 1.0.4
+ * - removed header from advance-payment modal for compatibility reasons
+ *
  * @package   OstCheckoutSignature
  *
  * @author    Eike Brandt-Warneke <e.brandt-warneke@aquatuning.de>
