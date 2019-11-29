@@ -21,6 +21,9 @@
  * 1.0.4
  * - removed header from advance-payment modal for compatibility reasons
  *
+ * 1.0.5
+ * - changed the signature-pad modal
+ *
  * @package   OstCheckoutSignature
  *
  * @author    Eike Brandt-Warneke <e.brandt-warneke@aquatuning.de>

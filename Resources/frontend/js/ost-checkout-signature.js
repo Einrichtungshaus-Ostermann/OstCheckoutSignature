@@ -160,9 +160,15 @@ $( document ).ready(function() {
                         var modalElement = "";
                         var cnt = '<div id="modalContentHolder" style="height: 98% !important;"></div>';
 
+
+
+
+
                         modalElement = $.modal.open(cnt, {
                             title: ostCheckoutSignatureSnippets.modalTitle,
                             additionalClass: "no--header",
+                            height: 400,
+                            additionalClass: 'ost-checkout-signature--js-modal'
                         });
 
                         var element = $(cSP);
@@ -219,6 +225,8 @@ $( document ).ready(function() {
                 modalElement = $.modal.open(cnt, {
                     title: ostCheckoutSignatureSnippets.modalTitle,
                     additionalClass: "no--header",
+                    height: 400,
+                    additionalClass: 'ost-checkout-signature--js-modal'
                 });
 
                 var element = $(cSP);

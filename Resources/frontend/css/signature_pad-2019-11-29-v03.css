@@ -22,11 +22,13 @@
   height: 100% !important;
 /*  max-width: 700px !important;
   max-height: 460px !important;*/
-  border: 1px solid #e8e8e8 !important;
+  /* border: 1px solid #e8e8e8 !important; */
   background-color: #fff !important;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset !important;
-  border-radius: 4px !important;
+  /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset !important; */
+  /* border-radius: 4px !important; */
   padding: 16px !important;
+  border: none;
+  box-shadow: none;
 }
 
 .signature-pad::before,
@@ -38,7 +40,7 @@
   height: 10px !important;
   bottom: 10px !important;
   background: transparent !important;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4) !important;
+  /* box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4) !important; */
 }
 
 .signature-pad::before {
@@ -58,7 +60,8 @@
   -webkit-box-flex: 1 !important;
       -ms-flex: 1 !important;
           flex: 1 !important;
-  border: 1px solid #f4f4f4 !important;
+  /* border: 1px solid #f4f4f4 !important; */
+  border: none;
 }
 
 .canvas--element{
@@ -74,8 +77,8 @@ canvas {
   top: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  border-radius: 4px !important;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.02) inset !important;
+  /* border-radius: 4px !important; */
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.02) inset !important; */
 }
 
 .signature-pad--footer {
@@ -107,10 +110,11 @@ canvas {
   float: left;
   margin: 5px !important;
   display: block;
+  border: none;
 }
 
 #CheckoutSignaturePluginSigContainer {
-  border: 1px solid #e9e9ff;
+  /* border: 1px solid #e9e9ff; */
   overflow: visible;
   position: relative;
 }
@@ -121,3 +125,14 @@ canvas {
   top: -5px;
   right: -10px;
 }
+
+div.js--modal.ost-checkout-signature--js-modal div.header {
+  display: none;
+}
+
+div.js--modal.ost-checkout-signature--js-modal div.content {
+  overflow: hidden;
+  height: 100% !important;
+}
+
+
